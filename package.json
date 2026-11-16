@@ -1,0 +1,55 @@
+{
+  "name": "van-phong-ai",
+  "productName": "Van Phong AI",
+  "version": "1.8.2",
+  "description": "Văn phòng ảo 3D: công ty công nghệ AI với thư ký JARVIS",
+  "author": "Craftbyte",
+  "main": "main.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "build:win": "electron-builder --win portable --x64"
+  },
+  "devDependencies": {
+    "electron": "44.9.3",
+    "electron-builder": "26.17.0"
+  },
+  "build": {
+    "appId": "asia.craftbyte.vanphongai",
+    "productName": "Van Phong AI",
+    "copyright": "Craftbyte",
+    "files": [
+      "main.js",
+      "preload.js",
+      "cc.js",
+      "live.js",
+      "tp.js",
+      "apps.js",
+      "skills/**/*",
+      "web/**/*",
+      "build/icon.png",
+      "package.json"
+    ],
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "build/icon.png"
+    },
+    "portable": {
+      "artifactName": "VanPhongAI-${version}.exe"
+    }
+  },
+  "dependencies": {
+    "tiktok-live-connector": "^2.5.0"
+  }
+}

@@ -1,0 +1,4 @@
+import { lapBatTu, lapTuVi, gieoQueDongXu, gieoQueMaiHoa, ganLoiQue, rutBai, datLoiQue } from './src/index';
+import loi from './data/kinhdich/loi-que.json';
+datLoiQue(loi as any);
+export { lapBatTu, lapTuVi, gieoQueDongXu, gieoQueMaiHoa, ganLoiQue, rutBai };
